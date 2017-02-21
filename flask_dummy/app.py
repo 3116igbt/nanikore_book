@@ -176,7 +176,7 @@ def show_reference():
     conn = psycopg2.connect("dbname=docomohack host=localhost user=postgres password=post")
     cur = conn.cursor()
     # ここにSQL 文を書き続ける
-    cur.execute("select quizid from quizanswer where userid=(%s) and itemID=(%s) and cleared=true", (user_id, ref_id))
+    cur.execute("select quizid from quizanswer where userid=(%s) and itemID=(%s)", (user_id, ref_id))
     while True:
         temp = cur.fetchone()[0]
         if type(temp) == type(""):
