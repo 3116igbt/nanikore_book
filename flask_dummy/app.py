@@ -178,10 +178,10 @@ def show_reference():
     # ここにSQL 文を書き続ける
     cur.execute("select quizid from quizanswer where userid=(%s) and itemID=(%s)", (user_id, ref_id))
     while True:
-        temp = cur.fetchone()[0]
-        if type(temp) == type(""):
+        temp = cur.fetchone()
+        if type(temp) != type(None):
             cur2 = conn.cursor()
-            cur2.execute("select descript from quiz where quizid = (%s)", (temp, ))
+            cur2.execute("select descript from quiz where quizid = (%s)", (temp[0], ))
             descriptions.append(cur2.fetchone()[0])
         else:
             break
