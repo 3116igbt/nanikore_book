@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Test for Flask </title>
+	</head>
+
+	<body>
+    
+    <form action="api/start_conversation" method="post">
+        <input type="submit" value="新規エージェントを作成">
+    </form>
+
+    <form action="api/chat" method="post">
+        <p>
+            talk_id:    <input type="text" name="talk_id" size="100">
+        </p>
+        <p>
+            querry:     <input type="text" name="querry" size="100">
+        </p>
+        <p>
+            <input type="submit" value="対話">
+        </p>
+    </form>
+
+    <form action="api/end_conversation" method="post">
+        <p>
+            talk_id:    <input type="text" name="talk_id" size="100">
+        </p>
+        <p>
+            <input type="submit" value="エージェントを削除">
+        </p>
+
+    </form>
+    </body>
+</html>
