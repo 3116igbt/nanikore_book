@@ -59,7 +59,7 @@ def get_reference():
         ref_id = tpl_ref[0]
         user_id = request.form["userId"]
         # 問題文をとってくる
-        cur.execute("select * from quiz where itemid="+ref_id+" and quizid not in (select quizid from quizanswer where userid=USERID and itemid=ITEMID and cleared=true); ")
+        tpl_ref = cur.execute("select * from item where name=(%s)",(name,))
         quiz = cur.fetchone()
         if type(quiz) == type(()):
             output["quizId"] = quiz[1]
