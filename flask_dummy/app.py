@@ -158,7 +158,7 @@ def post_question():
     output["status"] = True
     return json.dumps(output, indent = 4)
 
-@app.route("/api/showreference", methods=["POST"])
+@app.route("/api/showref", methods=["POST"])
 def show_reference():
 
     '''
