@@ -72,7 +72,7 @@ def get_reference():
     return json.dumps(output, indent = 4)
 
 
-@app.route("/api/hello")
+@app.route("/api/hello", methods=["POST"])
 def hello():
     output = {}
     output["hello"] = "flask"
