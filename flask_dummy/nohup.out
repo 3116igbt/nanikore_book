@@ -1,0 +1,61 @@
+ * Running on http://153.127.200.187:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+ * Detected change in '/home/firstsky/nanikore_book/flask_dummy/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+ * Detected change in '/home/firstsky/nanikore_book/flask_dummy/app.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "app.py", line 6, in <module>
+    import psycopg2
+ImportError: No module named psycopg2
+ * Running on http://153.127.200.187:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+ * Detected change in '/home/firstsky/nanikore_book/flask_dummy/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+ * Detected change in '/home/firstsky/nanikore_book/flask_dummy/app.py', reloading
+ * Restarting with stat
+  File "app.py", line 44
+    cur.execute("HOGEHOGE")
+      ^
+IndentationError: expected an indented block
+ * Running on http://153.127.200.187:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+180.59.9.210 - - [21/Feb/2017 22:25:29] "GET /test/getref HTTP/1.1" 200 -
+ * Detected change in '/home/firstsky/nanikore_book/flask_dummy/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+ * Detected change in '/home/firstsky/nanikore_book/flask_dummy/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    app.run(host="153.127.200.187", port=8080, debug = True)
+  File "/usr/local/pyenv/versions/anaconda2-4.2.0/lib/python2.7/site-packages/flask/app.py", line 843, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/pyenv/versions/anaconda2-4.2.0/lib/python2.7/site-packages/werkzeug/serving.py", line 677, in run_simple
+    s.bind((hostname, port))
+  File "/usr/local/pyenv/versions/anaconda2-4.2.0/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+ * Running on http://153.127.200.187:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 454-833-787
+ * Detected change in '/home/firstsky/nanikore_book/flask_dummy/app.py', reloading
+ * Restarting with stat
+  File "app.py", line 165
+    ref_id = request.form[]
+                          ^
+SyntaxError: invalid syntax
