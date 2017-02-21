@@ -163,8 +163,31 @@ def show_reference():
 
     '''
     やること
-    1. 
+    1. ユーザID, アイテムID を受け取る
+    2. 説明文を SQL に問い合わせ(複数)
+    3. json 返す
     '''
+    # 1. 
+    user_id = request.form["userId"]
+    ref_id = request.form["refId"]
+    # 2.
+    output = {}
+    descriptions = []
+    conn = psycopg2.connect("dbname=docomohack host=localhost user=postgres password=post")
+    cur = conn.cursor()
+    # ここにSQL 文を書き続ける
+    cur.execute("select quizid from quizanswer where userid=(%s) and itemID=(%s) and cleared=true", (user_id, ref_id))
+    while True:
+        temp = cur.fetchone()[0]
+        if type(temp) == type(""):
+            cur2 = conn.cursor()
+            cur2.execute("select descript from quiz where quizid = (%s)", (temp, ))
+            descriptions.append(cur2.fetchone()[0])
+        else:
+            break
+    # 3. 
+    output["descriptions"] = descriptions
+    return json.dumps(output, indent = 4)
 
 
 
