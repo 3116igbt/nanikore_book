@@ -32,7 +32,8 @@ def get_reference():
     4. json の準備
     '''
     # 1.2. 
-    name = img2name.recognize(request.form["img"])
+    # name = img2name.recognize(request.form["img"])
+    name = request.form["name"]
     # 3.
 
     output = {}
